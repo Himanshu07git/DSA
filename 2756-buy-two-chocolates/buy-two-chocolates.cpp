@@ -4,12 +4,10 @@ public:
         int orig= money;
         sort(prices.begin(), prices.end());
 
-        for(int i=0; i<=1; i++){
-           money=money-prices[i];
-        }
+        int val=money- (prices[0]+ prices[1]);
          
-        if(money>=0)
-           return money;
+        if(val>=0)
+           return val;
         else
            return orig;
     }
