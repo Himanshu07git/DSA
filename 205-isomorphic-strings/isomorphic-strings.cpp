@@ -1,7 +1,6 @@
 class Solution {
 public:
     bool isIsomorphic(string s, string t) {
-        if(s.empty() || t.empty()) return false;
         
         unordered_map<char, int> mp1, mp2;
 
