@@ -16,13 +16,13 @@ public:
 
                 int r = dq.empty() ? j + 1 : dq.back();
 
-                cost += 1LL * (r - l) * (nums[i] - nums[l]);
+                cost= cost + 1LL * (r - l) * (nums[i] - nums[l]);
             }
 
             dq.push_back(i);
 
             while (cost > k) {
-                cost -= nums[dq.front()] - nums[j];
+                cost = cost - (nums[dq.front()] - nums[j]);
 
                 if (dq.front() == j) {
                     dq.pop_front();
@@ -31,7 +31,7 @@ public:
                 j--;
             }
 
-            ans += j - i + 1;
+            ans = ans+ (j - i + 1);
         }
 
         return ans;
