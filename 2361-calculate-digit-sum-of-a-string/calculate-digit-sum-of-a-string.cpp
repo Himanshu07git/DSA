@@ -13,10 +13,8 @@ public:
 
                 temp += to_string(sum);
             }
-
             s = temp;
         }
-
         return s;
     }
 };
